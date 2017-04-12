@@ -1,0 +1,75 @@
+body{background-color: #BA66D1;
+      /*display: inline-block;*/
+}
+.header{
+  /*background: linear-gradient(#D957FF, #66FFFF);*/
+  font-family: 'Kaushan Script', cursive;
+  color: #D957FF;
+  font-size: 60px;
+  text-align: center;
+  margin-left: 125px;
+  font-style: italic;
+}
+.align-center {
+  text-align: center;
+}
+#search{
+  float: right;
+  margin-right: 270px;
+  background: linear-gradient(#BA66D1,#FF94B0);
+}
+.body{
+}
+hr {clear:both; visibility: hidden;}
+li{
+  list-style: none;
+  text-align: center;
+  font-size: 35px;
+}
+
+.h1{
+  background: #FF8AB8;
+  padding: 7px;
+}
+table {
+  /*background: linear-gradient(#D957FF, #66FFFF);*/
+  width: 50%;
+  text-align: center;
+}
+h2 {
+  text-align: center;
+  font-family: 'Kaushan Script', cursive;
+}
+#showAll{
+  background: linear-gradient(#D957FF, #66FFFF);
+    margin-left: 360px;
+}
+#hideAll{
+  background: linear-gradient(#D957FF, #66FFFF);
+    font-style:
+}
+label{font-size: 25px;
+  color: #66FFFF;
+  font-family: 'Kaushan Script', cursive;
+}
+.align-center {
+  text-align: center;
+}
+.blue{
+  font-size: 38px;
+  font-family: 'Kaushan Script', cursive;
+  background-color: skyBlue;
+  color: #D957FF;
+}
+.addedStock{
+  background-color:white;
+  float: left;
+  padding-left: 100px;
+  padding-right: 100px;
+  margin-left: 130px;
+    /*background: linear-gradient(#D957FF, #66FFFF);*/
+}
+#add{
+  background: linear-gradient(#D957FF, #66FFFF);
+  margin-left: 170px;
+}

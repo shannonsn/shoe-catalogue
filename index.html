@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Shoe Catalogue</title>
+    <link rel="stylesheet" href="shoe-catalogue.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
+</head>
+
+<body>
+    <div class="body">
+      <div class="h1">
+        <h1 class="header">Shoe Catalogue . . .</h1>
+      </div>
+      <br>
+        <div class="photo">
+          <img src="https://s-media-cache-ak0.pinimg.com/736x/00/54/e3/0054e3046464a3844d505e7651628d0e.jpg" align="left">
+</div>
+<h2>Can't find what you looking for ? <br>Oh that's a bummer how about searching for it .</h3>
+<div class="align-center"><div class="shoeColors">
+            <label>Shoe Color</label>
+            <input type="text" list="shoe-colors" id="shoeColor">
+            <datalist id="shoe-colors">
+        <option class="white">white</option>
+          <option class="black">black</option>
+            <option class="red">red</option>
+              <option class="beige">beige</option>
+                <option class="grey">grey</option>>
+              </datalist>
+        </div>
+        <br>
+        <br>
+        <div class="shoeSize">
+            <label>Shoe Size</label>
+            <input type="text" list="shoe-sizes" id="shoeSize">
+            <datalist id="shoe-sizes">
+                <option class="size3">3</option>
+                  <option class="size4">4</option>
+                      <option class="size5">5</option>
+                        <option class="size6">6</option>
+                          <option class="size7">7</option>
+                        </datalist>
+        </div>
+        <button id="search" type="button" name="button" onclick="searchFunction()">Search</button>
+      </div>
+        <br>
+        <br>
+        <button id='showAll' type="button" name="button" onclick="showStock()">show all stock</button>
+        <button id='hideAll' type="button" name="button" onclick="hideStock()">hide all stock</button>
+<br>
+        <p id="display"></p>
+
+        <div class="addedStock">
+          <script type="text/handlebars-x">
+
+          </script>
+          <h2>Want to add stock?</h2>
+          <label>insert color</label>
+          <input id="inColor" type="text" value="">
+          <br>
+          <br>
+          <label>insert size</label>
+          <input id='inSize' type="text" value="">
+          <br>
+          <br>
+          <label>insert stock</label>
+          <input id='inStock' type="text" value="">
+          <br>
+          <br>
+          <label>insert price</label>
+          <input id='inPrice' type="text" value="">
+          <br>
+          <br>
+        <button id='add' type="button" onclick="adding()">add stock</button>
+        <br>
+        </div>
+    </div>
+    <script class='output' type="text/handlebars-x">
+    <br>
+
+    <table align='center' border='1'>
+    <tr>
+    <th>Color</th>
+    <th>Size</th>
+    <th>In Stock</th>
+    <th>Price</th>
+    </tr>
+    {{#each shoes}}
+    <tr>
+       <td>{{color}}</td>
+       <td>{{size}}</td>
+       <td>{{in_stock}}</td>
+       <td>{{price}}</td>
+</tr>
+{{/each}}
+      </table>
+
+    </script>
+    <script class='show' type="text/handlebars-x">
+
+    <table align='center' border='1'>
+    <tr>
+    <th>Color</th>
+    <th>Size</th>
+    <th>In Stock</th>
+    <th>Price</th>
+    </tr>
+{{#each shoes}}
+    <tr>
+    <td>{{color}}</td>
+    <td>{{size}}</td>
+    <td>{{in_stock}}</td>
+    <td>{{price}}</td>
+    </tr>
+    {{/each}}
+    </table>
+    </script>
+    <script class='dropdown' type="text/handlebars-x">
+
+    </script>
+<div class="align-center">
+  <hr/>
+  <h1 class="blue"> Who Wants More ?</h1>
+</div>
+  <p id="displays"></p>
+
+</body>
+<br>
+
+<script src="shoe-catalogue.js">
+</script>
+
+</html>
