@@ -17,25 +17,47 @@ function searchFunction() {
 
     var stockWasFound = false;
 
-    for (var i = 0; i < shoes.length; i++) {
+    if (colors !== "" && sizes !== "") {
+        for (var i = 0; i < shoes.length; i++) {
 
-        var object = shoes[i];
-        if (colors === object.color || sizes === object.sizes) {
+            var object = shoes[i];
+            if (colors === object.color && sizes === object.size) {
+                sStock.push(object)
+                stockWasFound = true;
+            }
 
-            sStock.push(object)
-            stockWasFound = true;
-
+            if (stockWasFound === false) {
+                document.querySelector("#display").innerHTML = "<h2>Sorry, We are currently out of stock.</h2>";
+            } else {
+                var data = {
+                    shoes: sStock
+                };
+                document.querySelector('#display').innerHTML = outputs(data);
+            }
+            document.getElementById('shoeColor').value = "";
+            document.getElementById('shoeSize').value = "";
         }
+    } else {
+        for (var i = 0; i < shoes.length; i++) {
 
-        if (stockWasFound === false) {
-            document.querySelector("#display").innerHTML = "<h2>Sorry, We are currently out of stock.</h2>";
-        } else {
-          var data = {shoes: sStock};
-          document.querySelector('#display').innerHTML = outputs(data);
+            var object = shoes[i];
+            if (colors === object.color || sizes === object.size) {
+                sStock.push(object)
+                stockWasFound = true;
+            }
+            if (stockWasFound === false) {
+                document.querySelector("#display").innerHTML = "<h2>Sorry, We are currently out of stock.</h2>";
+            } else {
+                var data = {
+                    shoes: sStock
+                };
+                document.querySelector('#display').innerHTML = outputs(data);
+            }
+            document.getElementById('shoeColor').value = "";
+            document.getElementById('shoeSize').value = "";
         }
-        document.getElementById('shoeColor').value = "";
-        document.getElementById('shoeSize').value = "";
     }
+
 }
 
 var stockTemplateText = document.querySelector('.show').innerHTML
